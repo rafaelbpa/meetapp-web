@@ -39,10 +39,10 @@ export default function Details({ match }) {
 
   return (
     <Container>
-      <head>
-        <strong>{meetup.title}</strong>
+      <header>
+        <span>{meetup.title}</span>
         <div>
-          <Link to="/new">
+          <Link to={`/edit/${meetup.id}`}>
             <button className="edit" type="button">
               <div>
                 <MdEdit color="#fff" size={20} />
@@ -61,7 +61,7 @@ export default function Details({ match }) {
             </div>
           </button>
         </div>
-      </head>
+      </header>
 
       <img src={meetup.banner} alt="Banner" />
       <p>{meetup.description}</p>

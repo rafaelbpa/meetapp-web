@@ -12,16 +12,16 @@ export default function BannerInput() {
   const [preview, setPreview] = useState(defaultValue && defaultValue.url);
 
   const ref = useRef();
-
   useEffect(() => {
     if (ref.current) {
       registerField({
-        name: 'avatar_id',
+        name: 'file_id',
         ref: ref.current,
         path: 'dataset.file',
       });
     }
-  }, [ref, registerField]);
+    // eslint-disable-next-line
+  }, [ref.current]);
 
   async function handleChange(e) {
     const data = new FormData();
@@ -43,7 +43,7 @@ export default function BannerInput() {
           <img src={preview} alt="" />
         ) : (
           <div className="add_image">
-            <MdPhotoCamera color="#fff" size={48} />
+            <MdPhotoCamera size={48} color="#FFF" />
             <span>Selecionar imagem</span>
           </div>
         )}

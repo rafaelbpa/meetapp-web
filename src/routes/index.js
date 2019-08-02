@@ -8,7 +8,8 @@ import SignUp from '../pages/SignUp';
 import Dashboard from '../pages/Dashboard';
 import Profile from '../pages/Profile';
 import Details from '../pages/Details';
-import Meetup from '../pages/Meetup';
+import Edit from '../pages/Edit';
+import New from '../pages/New';
 
 export default function Routes() {
   return (
@@ -19,7 +20,8 @@ export default function Routes() {
       <Route path="/dashboard" component={Dashboard} isPrivate />
       <Route path="/profile" component={Profile} isPrivate />
       <Route path="/details/:id" component={Details} isPrivate />
-      <Route path="/new" component={Meetup} isPrivate />
+      <Route path="/edit/:id" component={Edit} isPrivate />
+      <Route path="/new" component={New} isPrivate />
 
       <Route path="/" component={() => <h1>404</h1>} />
     </Switch>

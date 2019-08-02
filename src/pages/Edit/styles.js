@@ -42,10 +42,10 @@ export const Container = styled.div`
       }
     }
 
-    div {
+    div.div_with_btn {
       align-self: flex-end;
 
-      button {
+      .edit_btn {
         margin: 5px 0 0;
         height: 42px;
         width: 162px;
@@ -71,6 +71,16 @@ export const Container = styled.div`
             font-size: 16px;
           }
         }
+      }
+    }
+
+    .react-datepicker__input-container {
+      display: flex;
+      align-self: stretch;
+      width: 100%;
+
+      > input {
+        width: 100%;
       }
     }
   }

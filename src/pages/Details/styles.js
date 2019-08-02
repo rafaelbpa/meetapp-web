@@ -6,16 +6,17 @@ export const Container = styled.div`
   max-width: 940px;
   margin: 50px auto;
 
-  head {
+  header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 41px;
 
-    strong {
+    > span {
       color: #fff;
       font-size: 32px;
       line-height: 41px;
+      font-weight: bold;
     }
 
     div {
@@ -55,6 +56,7 @@ export const Container = styled.div`
     font-size: 18px;
     line-height: 32px;
     margin-bottom: 30px;
+    font-weight: bold;
   }
 `;
 export const MeetupDetails = styled.div`

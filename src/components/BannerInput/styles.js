@@ -45,6 +45,7 @@ export const Container = styled.div`
         line-height: 25px;
         text-align: center;
         align-self: center;
+        font-weight: bold;
       }
     }
 

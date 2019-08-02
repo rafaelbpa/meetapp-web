@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { darken } from 'polished';
 
 export const Container = styled.div`
   max-width: 940px;
@@ -12,18 +13,39 @@ export const Container = styled.div`
     align-items: center;
     justify-content: space-between;
 
-    button {
-      border: 0;
-      border-radius: 4px;
-      background: #f94d6a;
-      color: #fff;
-      height: 42px;
-      width: 172px;
+    a {
+      .new_btn {
+        margin: 5px 0 0;
+        height: 42px;
+        width: 162px;
+        background: #f94d6a;
+        border: 0;
+        border-radius: 4px;
+        font-size: 16px;
+        transition: background 0.2s;
+
+        &:hover {
+          background: ${darken(0.03, '#F94D6A')};
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          span {
+            color: #fff;
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 16px;
+          }
+        }
+      }
     }
 
-    strong {
+    > span {
       color: #fff;
-      font-weight: normal;
+      font-weight: bold;
       font-size: 32px;
       line-height: 41px;
       margin: 0 15px;
@@ -54,7 +76,7 @@ export const MeetupList = styled.li`
     color: #fff;
     font-size: 18px;
     line-height: 23px;
-    font-weight: normal;
+    font-weight: bold;
   }
 
   div {
